@@ -1,16 +1,33 @@
-# This is a sample Python script.
+def bubble_sort(arr):
+    """Функция для сортировки массива методом пузырька."""
+    n = len(arr)
+    for i in range(n):
+        for j in range(n - i - 1):
+            if arr[j] > arr[j + 1]:
+                # Меняем элементы местами
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+def main():
+    print("Введите числа через пробел для сортировки:")
+    try:
+        # Получаем ввод от пользователя
+        user_input = input()
+        # Преобразуем ввод в список чисел
+        numbers = [int(x) for x in user_input.split()]
+    except ValueError:
+        print("Ошибка: вводите только целые числа, разделённые пробелами.")
+        return
+
+    # Выводим исходный список
+    print("Исходный список:", numbers)
+
+    # Сортируем методом пузырька
+    bubble_sort(numbers)
+
+    # Выводим отсортированный список
+    print("Отсортированный список:", numbers)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('AlCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
