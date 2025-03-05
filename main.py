@@ -26,7 +26,7 @@ def main():
     bubble_sort(numbers)
 
     # Выводим отсортированный список
-    print("Отсортированный список:", numbers)
+    print("Отсортированный sписок:", numbers)
 
 
 if __name__ == "__main__":
