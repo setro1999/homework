@@ -20,7 +20,7 @@ def main():
         return
 
     # Выводим исходный список
-    print("Исходнfый список:", numbers)
+    print("Исходный список:", numbers)
 
     # Сортируем методом пузырька
     bubble_sort(numbers)
